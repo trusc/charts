@@ -12,6 +12,8 @@ spec:
     matchLabels:
       app: "{{ template "wordpress.fullname" . }}"
       release: {{ .Release.Name | quote }}
+  strategy:
+    type: {{ .Values.updateStrategy | default "RollingUpdate" }}
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:

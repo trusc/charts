@@ -203,6 +203,8 @@ readinessProbe:
 # - name: X-Forwarded-Proto
 #   value: https
 
+updateStrategy: RollingUpdate
+
 ## Configure the ingress resource that allows you to access the
 ## WordPress installation. Set up the URL
 ## ref: http://kubernetes.io/docs/user-guide/ingress/
