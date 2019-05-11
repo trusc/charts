@@ -120,6 +120,10 @@ spec:
               name: {{ template "mariadb.fullname" . }}
             {{- end }}
               key: mariadb-replication-password
+        {{- if .Values.defaultTimezone }}
+        - name: TZ
+          value: {{ .Values.defaultTimezone }}
+        {{- end }}
         ports:
         - name: mysql
           containerPort: 3306

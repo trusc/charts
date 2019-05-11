@@ -128,6 +128,9 @@ replication:
 ## Note: This will override initdbScripts
 # initdbScriptsConfigMap:
 
+## Default time zone, e.g. Europe/Berlin
+# defaultTimezone: UTC
+
 master:
   ## Mariadb Master additional pod annotations
   ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
